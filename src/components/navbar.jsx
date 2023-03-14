@@ -11,7 +11,7 @@ export const Navbar = ( ) =>{
         <Link className="text-decoration-none ms-5" to={'/'}>
         <span className="navbar-brand text-white">Uniformes Médicos 2015</span>
         </Link>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
             <li className="nav-item ">
               <Link className="ms-2" to="/cart">
@@ -24,7 +24,7 @@ export const Navbar = ( ) =>{
               </Link>
             </li>
           </ul>
-        </div>
+        
       </div>
     </nav>
     </>

@@ -31,7 +31,7 @@ export const Home = ( ) =>{
                 uniforms.map ( uniform => {
                     return (
                         
-        <div className="card mt-3 border border-dark mx-2" style={{width: "18rem"}} key={uniform.id}>
+        <div className="card mt-3 border border-dark mx-5" style={{width: "18rem"}} key={uniform.id}>
             <img src="https://picsum.photos/300/200" className="card-img-top mt-2" alt="..."/>
             <div className="card-body">
                 <h5 className="card-title">{uniform.id}</h5>
