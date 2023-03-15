@@ -8,8 +8,8 @@ export const Navbar = ( ) =>{
     <>
     <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top pt-3" data-bs-theme="dark">
       <div className="container-fluid ">
-        <Link className="text-decoration-none ms-5" to={'/'}>
-        <span className="navbar-brand text-white">Uniformes Médicos 2015</span>
+        <Link className="text-decoration-none" to={'/'}>
+        <span className="navbar-brand text-white">Pastillas de freno</span>
         </Link>
         
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">

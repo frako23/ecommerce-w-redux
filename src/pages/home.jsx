@@ -1,7 +1,7 @@
 import {data} from "../assets/data";
-import { Navbar } from "../components/navbar";
 import { addProductToCart, removeProductFromCart } from "../reducers/cart/cartSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { Carousel } from "../components/carousel";
 
 
 
@@ -31,8 +31,11 @@ export const Home = ( ) =>{
                 uniforms.map ( uniform => {
                     return (
                         
-        <div className="card mt-3 border border-dark mx-5" style={{width: "18rem"}} key={uniform.id}>
-            <img src="https://picsum.photos/300/200" className="card-img-top mt-2" alt="..."/>
+        <div className="card mt-3 border border-dark" style={{width: "15rem"}} key={uniform.id}>
+            
+            <Carousel />
+            
+            {/* <img src="https://picsum.photos/300/200" className="card-img-top mt-2" alt="..."/> */}
             <div className="card-body">
                 <h5 className="card-title">{uniform.id}</h5>
                 <div className="card-text">

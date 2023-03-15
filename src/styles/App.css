@@ -1,0 +1,22 @@
+#carousel-container {
+    height: 100%;
+    width: 13 rem;
+    padding: 0;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    --slide-count: 3;
+    -webkit-overflow-scrolling: touch
+  }
+
+  #carousel {
+    width: calc(100% * var(--slide-count));
+    display: flex;
+  }
+
+  .slide > img {
+    max-width: 19rem;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+  }

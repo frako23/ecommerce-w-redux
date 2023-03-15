@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/home";
 import { Cart } from "./pages/cart";
+import { Carousel } from "./components/carousel";
 import { Navbar } from "./components/navbar"
 
 function App() {
