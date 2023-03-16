@@ -2,6 +2,7 @@ import {data} from "../assets/data";
 import { addProductToCart, removeProductFromCart } from "../reducers/cart/cartSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { Carousel } from "../components/carousel";
+import "../styles/App.css"
 
 
 
@@ -46,8 +47,7 @@ export const Home = ( ) =>{
                 <button onClick={() => {handleAddOrRemoveProduct(uniform.id)}} 
                 className={`btn ${productsList.find(unf => unf.id === uniform.id) ? "btn-danger" : "btn-success" }`}
                 > {productsList.find(unf => unf.id === uniform.id) ? "Remover del carrito" : "Añadir al carrito"}  
-                 </button>
-                 
+                </button>
             </div>
         </div>
                         
