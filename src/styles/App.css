@@ -20,3 +20,7 @@
     object-fit: cover;
     scroll-snap-align: start;
   }
+
+  ul {
+    list-style: none;
+}

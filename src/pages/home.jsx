@@ -31,7 +31,7 @@ export const Home = ( ) =>{
                 uniforms.map ( uniform => {
                     return (
                         
-        <div className="card mt-3 border border-dark" style={{width: "15rem"}} key={uniform.id}>
+        <div className="card mt-3 border border-dark mx-4" style={{width: "20rem"}} key={uniform.id}>
             
             <Carousel />
             
