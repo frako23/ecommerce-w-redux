@@ -24,3 +24,19 @@
   ul {
     list-style: none;
 }
+
+.buttonL{
+  position: absolute;
+  top: 25%;
+  left: 87%;
+}
+
+.buttonR{
+  position: absolute;
+  top: 25%;
+  right: 87%;
+}
+
+h6 {
+  font-size: small;
+}

@@ -24,7 +24,7 @@ export const Home = ( ) =>{
 
     return (
         <>
-        <div className="container mt-5 pt-4">
+        <div className="ms-4 mt-5 pt-4">
         
         
         <div className="row contenedor">
@@ -32,20 +32,19 @@ export const Home = ( ) =>{
                 uniforms.map ( uniform => {
                     return (
                         
-        <div className="card mt-3 border border-dark mx-2" style={{width: "20rem"}} key={uniform.id}>
+        <div className="card mt-3 border border-dark mx-2" style={{width: "20rem", height: "33rem"}} key={uniform.id}>
             
-            <Carousel />
+            <Carousel data={uniform} />
             
-            {/* <img src="https://picsum.photos/300/200" className="card-img-top mt-2" alt="..."/> */}
             <div className="card-body">
-                <h5 className="card-title">{uniform.id}</h5>
+                <h5 className="card-title">{uniform.code}</h5>
                 <div className="card-text">
-                        <div><b>Código:</b> {uniform.code}</div>
-                        <div><b>Talla:</b> {uniform.size}</div>
-                        <div><b>Marca:</b> {uniform.brand}</div>
-                        <div><b>Precio:</b> {uniform.price}</div></div>
+                        <div className="d-flex"><b>Modelos:</b><h6 className="pt-1 ms-1">{uniform.carModels}</h6></div>
+                        <div><b>Tipo:</b> {uniform.type}</div>
+                        <div><b>Precio:</b> $ {uniform.price}</div>
+                        <div><b>Inventario:</b> {uniform.inventory}</div></div>
                 <button onClick={() => {handleAddOrRemoveProduct(uniform.id)}} 
-                className={`btn ${productsList.find(unf => unf.id === uniform.id) ? "btn-danger" : "btn-success" }`}
+                className={`btn ${productsList.find(unf => unf.id === uniform.id) ? "btn-danger" : "btn-success" } mt-2`}
                 > {productsList.find(unf => unf.id === uniform.id) ? "Remover del carrito" : "Añadir al carrito"}  
                 </button>
             </div>

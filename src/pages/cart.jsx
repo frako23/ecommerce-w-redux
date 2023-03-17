@@ -50,9 +50,7 @@ export const Cart = () => {
             <table className='table'>
                 <thead>
                     <tr>
-                        <th scope='col'>ID</th>
-                        <th scope='col'>Codigo</th>
-                        <th scope='col'>Talla</th>
+                        <th scope='col'>Código</th>
                         <th scope='col'>Precio</th>
                         <th scope='col'>Eliminar</th>
                     </tr>
@@ -61,10 +59,8 @@ export const Cart = () => {
                     {productsList.map(product => {
                         return (
                             <tr key={product.id}>
-                                <th scope='row'>{product.id}</th>
                                 <th scope='row'>{product.code}</th>
-                                <th scope='row'>{product.size}</th>
-                                <th scope='row'>{product.price}</th>
+                                <th scope='row'> $ {product.price}</th>
                                 <th scope='row'><button className='btn btn-danger' onClick={() => handleRemoveProduct (product.id)}>Eliminar</button></th>
                             </tr>)
                     })}
