@@ -6,6 +6,7 @@ import "../styles/App.css"
 
 
 
+
 export const Home = ( ) =>{
     const dispatch = useDispatch();
     const uniforms = data;
@@ -27,26 +28,26 @@ export const Home = ( ) =>{
         <div className="ms-4 mt-5 pt-4">
         
         
-        <div className="row contenedor">
+        <div className="row contenedor" style={{gap:"3rem"}}>
             {
                 uniforms.map ( uniform => {
                     return (
                         
-        <div className="card mt-3 border border-dark mx-2" style={{width: "20rem", height: "33rem"}} key={uniform.id}>
+        <div className="card mt-3 border  mx-2 p-0" style={{width: "20rem", height: "auto"}} key={uniform.id}>
             
-            <Carousel data={uniform} />
+            <Carousel data={uniform} className="pt-5"/>
             
             <div className="card-body">
-                <h5 className="card-title">{uniform.code}</h5>
-                <div className="card-text">
+            <span className="float-start badge rounded-pill bg-primary" style={{fontSize:"1em"}}>{uniform.code}</span> 
+            <span className="float-end price-hp">${uniform.price}</span>                
+                <div className="card-text" style={{padding: "2rem", marginTop: "2rem"}}>
                         <div className="d-flex"><b>Modelos:</b><h6 className="pt-1 ms-1">{uniform.carModels}</h6></div>
                         <div><b>Tipo:</b> {uniform.type}</div>
-                        <div><b>Precio:</b> $ {uniform.price}</div>
-                        <div><b>Inventario:</b> {uniform.inventory}</div></div>
-                <button onClick={() => {handleAddOrRemoveProduct(uniform.id)}} 
-                className={`btn ${productsList.find(unf => unf.id === uniform.id) ? "btn-danger" : "btn-success" } mt-2`}
+                                                </div>
+                <a onClick={() => {handleAddOrRemoveProduct(uniform.id)}} 
+                className={` d-flex justify-content-center btn rounded-pill ${productsList.find(unf => unf.id === uniform.id) ? "btn-danger" : "btn-success" } mt-2`}
                 > {productsList.find(unf => unf.id === uniform.id) ? "Remover del carrito" : "Añadir al carrito"}  
-                </button>
+                </a>
             </div>
         </div>
                         
@@ -54,7 +55,10 @@ export const Home = ( ) =>{
                 })
             }
         </div>
+
+        
         </div>
-        </>
+       
+               </>
     )
 }

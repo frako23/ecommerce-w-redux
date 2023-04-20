@@ -15,7 +15,7 @@ export const Navbar = ( ) =>{
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
             <li className="nav-item ">
               <Link className="ms-2" to="/cart">
-              <button className="btn btn-primary text-white position-relative" aria-current="page" >
+              <button className="btn btn-primary rounded-pill text-white position-relative" style={{padding:" 5px  15px"}} aria-current="page" >
                 <i className="fa-solid fa-cart-shopping ms-1"></i>
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   {totalCount}
