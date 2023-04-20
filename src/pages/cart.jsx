@@ -69,7 +69,7 @@ export const Cart = () => {
             </table>
             <a className='btn btn-success mb-5 rounded-pill' href={urlBase}> Completa tu pedido por <i className="fa-brands fa-whatsapp fs-3 ms-2"></i></a>
             <Link to="/">
-            <button className='btn btn-warning mb-5 rounded-pill ms-5'> Regresar <i className="fa-brands fa-return fs-3 ms-2"></i></button>
+            <button className='btn btn-warning mb-5 rounded-pill ms-5'> Regresar <i class="fa-solid fa-people-pulling fs-3 ms-2"></i></button>
             </Link>
             
             {/* <a className='btn btn-success mb-5' onClick={() => whatsappUrl()} href={`${linkHref}`}></a> */}
