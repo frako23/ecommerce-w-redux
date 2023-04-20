@@ -7,7 +7,8 @@ export const Cart = () => {
     const [linkHref, setLinkHref] = useState("");
     const dispatch = useDispatch();
     const { productsList } = useSelector(state => state.cart);
-    let codigo = ""
+    let codigo = "";
+    let monto = 0;
 
     const handleRemoveProduct = (productId) => dispatch(removeProductFromCart(productId));
     // const whatsappUrl = () => {
@@ -24,13 +25,13 @@ export const Cart = () => {
         for (let index = 0; index < productsList.length; index++) {
             
             if (index == productsList.length - 1) {
-                
-                codigo = codigo.concat(productsList[index].id)
+                monto = monto + productsList[index].price
+                codigo = codigo.concat(productsList[index].code)
                 console.log("entra aqui");
             }
             
             else {
-                codigo = codigo.concat(`${productsList[index].id},%20`)        
+                codigo = codigo.concat(`${productsList[index].code},%20`)        
             }
 
             
@@ -39,7 +40,7 @@ export const Cart = () => {
     }
 
     
-    const urlBase = `https://api.whatsapp.com/send?phone=+584242526757&text=Hola!%20estoy%20interesad@%20en%20los%20siguientes%20productos%0A%0A*Codigos*:%20${codigo}`;
+    const urlBase = `https://api.whatsapp.com/send?phone=+584242526757&text=Hola!%20estoy%20interesad@%20en%20los%20siguientes%20productos%0A%0A*Codigos*:%20${codigo}%0A%0A*Total*:%20$${monto}`;
 
     console.log(urlBase)
 
@@ -64,12 +65,16 @@ export const Cart = () => {
                                 <th scope='row'> $ {product.price}</th>
                                 <th scope='row'><button className='btn btn-danger' onClick={() => handleRemoveProduct (product.id)}>Eliminar</button></th>
                             </tr>)
-                    })}
+                    })
+                    
+                    }
+                    {console.log(productsList)}
+                    {/* {console.log(productsList[0].code)} */}
                 </tbody>
             </table>
             <a className='btn btn-success mb-5 rounded-pill' href={urlBase}> Completa tu pedido por <i className="fa-brands fa-whatsapp fs-3 ms-2"></i></a>
             <Link to="/">
-            <button className='btn btn-warning mb-5 rounded-pill ms-5'> Regresar <i class="fa-solid fa-people-pulling fs-3 ms-2"></i></button>
+            <button className='btn btn-warning mb-5 rounded-pill ms-5'> Regresar <i className="fa-solid fa-people-pulling fs-3 ms-2"></i></button>
             </Link>
             
             {/* <a className='btn btn-success mb-5' onClick={() => whatsappUrl()} href={`${linkHref}`}></a> */}
