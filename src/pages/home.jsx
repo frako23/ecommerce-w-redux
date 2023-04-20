@@ -25,7 +25,7 @@ export const Home = ( ) =>{
 
     return (
         <>
-        <div className="ms-4 mt-5 pt-4">
+        <div className="mt-5 pt-4">
         
         
         <div className="row contenedor" style={{gap:"3rem"}}>
