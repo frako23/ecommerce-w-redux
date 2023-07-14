@@ -5,6 +5,7 @@ import { Home } from "./pages/home";
 import { Cart } from "./pages/cart";
 import { Carousel } from "./components/carousel";
 import { Navbar } from "./components/navbar"
+import "../src/index.css"
 
 function App() {
   const [count, setCount] = useState(0)
