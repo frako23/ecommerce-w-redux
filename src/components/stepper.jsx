@@ -53,13 +53,6 @@ export const Stepper = ({steps, currentStep}) => {
                    else if (count < stepNumber) {
                     console.log(count);
                     console.log(stepNumber);
-                    newSteps[count+1] ={
-                     
-                        ...newSteps[count+1],
-                        highlighted: true,
-                        selected: true,
-                        completed: true
-                    };
                     newSteps[count] = {
                         ...newSteps[count],
                         highlighted: false,
@@ -84,8 +77,8 @@ export const Stepper = ({steps, currentStep}) => {
                     console.log(count);
                 }
                 console.log(newSteps);
-                return newSteps;
             }
+                return newSteps;
     }
 
     useEffect(() => {
